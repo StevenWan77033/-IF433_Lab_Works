@@ -3,21 +3,23 @@ package oop_00000077033_stevenwan.week01
 fun main() {
     val gameTitle: String = "Cyberpunk 2077"
     val price: Int = 700000
+    val userNote: String? = null
 
     val finalPrice = if (price > 500000) (price * 0.8).toInt() else (price * 0.9).toInt()
 
-    printReceipt(title = gameTitle, finalPrice = finalPrice)
+    printReceipt(title = gameTitle, finalPrice = finalPrice, userNote = userNote)
 }
 
 fun calculateDiscount(price: Int): Int = if (price > 500000) {
-    (price * 0.8).toInt() // Diskon 20%
+    (price * 0.8).toInt()
 } else {
-    (price * 0.9).toInt() // Diskon 10%
+    (price * 0.9).toInt()
 }
 
-fun printReceipt(title: String, finalPrice: Int) {
+fun printReceipt(title: String, finalPrice: Int, userNote: String?) {
     println("=== STRUK PEMBAYARAN ===")
     println("Game: $title")
     println("Harga Akhir: Rp $finalPrice")
+    println("Catatan: ${userNote ?: "Tidak ada catatan"}")
     println("========================")
 }
