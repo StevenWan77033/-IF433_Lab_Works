@@ -21,7 +21,11 @@ fun main() {
         print("Masukan Jurusan: ")
         val major = scanner.nextLine()
 
-        val s1 = Student(name, nim, major)
+        val s1: Student = if (major.isEmpty()) {
+            Student(name, nim)
+        } else {
+            Student(name, nim, major)
+        }
         println("Status: Pendaftaran Selesai.")
     }
 }
