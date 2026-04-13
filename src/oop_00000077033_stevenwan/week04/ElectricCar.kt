@@ -1,7 +1,5 @@
 package oop_00000077033_stevenwan.week04
 
-package oop_001_johnthor.week04
-
 class ElectricCar(
     brand: String,
     numberOfDoors: Int,
