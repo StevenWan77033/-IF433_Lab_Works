@@ -51,4 +51,15 @@ fun main() {
     println("- Rarity: ${starterWeapon.item.rarity}")
     println("- Durability: ${starterWeapon.durability}")
 
+    println("\n=== TASK: MODIFIKASI IMMUTABILITY & SIGNAL EVENT ===")
+
+    val upgradedItem = starterWeapon.item.copy(name = "Pedang Kayu Tajam", damage = 25)
+    println("Senjata berhasil di-upgrade! Damage baru: ${upgradedItem.damage}")
+
+    println("\n--- Memulai Simulasi Event Pertarungan ---")
+    processEvent(SafeZone)
+    processEvent(MonsterEncounter("Goblin Nakal"))
+    processEvent(LootDropped(upgradedItem))
+    processEvent(GameOver("Terkena jebakan racun"))
+
 }
