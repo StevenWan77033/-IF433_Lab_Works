@@ -16,3 +16,10 @@ class SmartHomeHub {
             }
         }
     }
+
+            if (device is SmartSpeaker) {
+                device.playMusic("Sirine Peringatan")
+            }
+        }
+    }
+}
