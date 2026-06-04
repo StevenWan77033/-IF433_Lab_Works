@@ -17,6 +17,13 @@ class SmartHomeHub {
         }
     }
 
+    // PASTIKAN FUNGSI INI ADA DI DALAM FILE SmartHomeHub.kt
+    fun activateSecurityMode() {
+        println("\n--- MENGAKTIFKAN MODE KEAMANAN ---")
+        for (device in devices) {
+            if (device is Recordable) {
+                device.startRecord()
+            }
             if (device is SmartSpeaker) {
                 device.playMusic("Sirine Peringatan")
             }
