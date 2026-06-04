@@ -36,4 +36,8 @@ fun main() {
         ApiResponse.Loading -> "Tampilkan Spinner"
     }
     println(uiMessage)
+
+    println("\n=== TASK: TEST SINGLETON GAMEMANAGER ===")
+    GameManager.startGame() // Panggilan pertama -> Memulai Game Engine...
+    GameManager.startGame() // Panggilan kedua -> Mencegah instansiasi ganda.
 }
