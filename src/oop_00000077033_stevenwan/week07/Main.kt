@@ -38,6 +38,17 @@ fun main() {
     println(uiMessage)
 
     println("\n=== TASK: TEST SINGLETON GAMEMANAGER ===")
-    GameManager.startGame() // Panggilan pertama -> Memulai Game Engine...
-    GameManager.startGame() // Panggilan kedua -> Mencegah instansiasi ganda.
+    GameManager.startGame()
+    GameManager.startGame()
+
+    println("\n=== TASK: SIMULASI FACTORY & ENUM ===")
+    println("Drop chance item LEGENDARY adalah: ${ItemRarity.LEGENDARY.dropChance}%")
+
+    val starterWeapon = Weapon.forgeStarterSword()
+    println("Senjata awal berhasil dibuat:")
+    println("- Nama: ${starterWeapon.item.name}")
+    println("- Damage: ${starterWeapon.item.damage}")
+    println("- Rarity: ${starterWeapon.item.rarity}")
+    println("- Durability: ${starterWeapon.durability}")
+
 }
