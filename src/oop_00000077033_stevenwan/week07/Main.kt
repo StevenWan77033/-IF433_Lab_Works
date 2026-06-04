@@ -1,3 +1,11 @@
 package oop_00000077033_stevenwan.week07
 
-val client = NetworkClient("https://umn.ac.id")
+fun main() {
+    println("=== TEST SINGLETON ===")
+    println("Status: ${DatabaseManager.connectionStatus}")
+    DatabaseManager.connect()
+
+    println("\n=== TEST COMPANION OBJECT ===")
+    val client = NetworkClient.createClient() // Instansiasi lewat Factory
+    client.connect()
+}
