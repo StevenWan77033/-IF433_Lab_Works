@@ -11,7 +11,6 @@ fun main() {
     val validOrder = Order(null, 250000)
 
     val receipt = validOrder.totalPrice?.let { price ->
-        // Blok ini HANYA jalan jika totalPrice tidak null
         val tax = price * 0.11
         "Transaksi Valid. Harga: Rp$price, Pajak: Rp$tax"
     } ?: "Transaksi Invalid: Harga belum di-set!"
@@ -30,7 +29,6 @@ fun main() {
     for (item in mixedData) {
         val text = item as? String
 
-        // Hanya cetak jika cast sukses (text tidak null)
         text?.let {
             println("Ditemukan teks: ${it.uppercase()}")
         }
